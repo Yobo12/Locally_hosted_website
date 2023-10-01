@@ -1,0 +1,15 @@
+<?php
+    $Db = "mysql:host=localhost;dbname=Learning";
+    $password = "";
+    $host = "root";
+
+   try () {
+    $pdo = new PDO($Db,$host,$password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+   } 
+   catch(PDOException $e) {
+        echo "connection failed:" .$e->getMessage();
+   }
+    
+
+    

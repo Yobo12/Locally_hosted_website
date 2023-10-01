@@ -1,0 +1,96 @@
+
+#Item_container
+{
+    text-align: center;
+    padding: 150px;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "LocalFoods ForeignFoods"
+        "LocalFoods ForeignFoods"
+        "LocalFoods ForeignFoods"
+        "LocalFoods ForeignFoods"
+        "InspirationWriting InspirationWriting"
+}
+
+Local_Foods
+{
+    grid-area: LocalFoods;
+}
+
+img
+{
+    height: 600px;
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: 0px 33px 66px 20px rgba(1,43,100, 0.5)
+}
+
+.overlay
+{
+    background: rgba(0, 0, 0, 0.5);
+    margin-left: 24px;
+    opacity: 0;
+    height: 0px;
+    width: 450px;
+    border-radius: 20px;
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.801) rgba(0,0,0,0.801));
+    transition: height 2s ease;
+}
+
+.overlay:hover
+{
+   height: 600px;
+   opacity: 1;
+}
+
+.image-content
+{
+    padding: 200px;
+    color: white;
+}
+
+#Foreign_Foods        
+{
+    grid-area: ForeignFoods
+}
+
+.foreign_overlay
+{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    height: 0px;
+    width: 450px;
+    margin-left: 23px;
+    border-radius: 20px;
+    transition: height 2s ease;
+}
+
+.foreign_overlay:hover
+{
+    height: 600px;
+    opacity: 1;
+}
+
+
+.foreign_imageContent
+{
+    padding: 200px;
+    color: white;
+}
+
+#Inspiration_Writing
+{
+    margin-top: 100px;
+    grid-area: InspirationWriting;
+}
+
+h1
+{
+    font-size: 40px;
+    color: lightblue;
+}
